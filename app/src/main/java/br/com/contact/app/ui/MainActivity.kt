@@ -1,4 +1,4 @@
-package br.com.contact.app.activity
+package br.com.contact.app.ui
 
 import android.app.Application
 import br.com.contact.BuildConfig

@@ -6,7 +6,7 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".app.activity.ContactListActivity">
+        tools:context=".app.ui.ContactListActivity">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appbar"

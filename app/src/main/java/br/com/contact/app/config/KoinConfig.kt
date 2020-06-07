@@ -2,6 +2,7 @@ package br.com.contact.app.config
 
 import androidx.room.Room
 import br.com.contact.app.ui.viemModel.ContactListViewModel
+import br.com.contact.app.ui.viemModel.FavoriteContactsViewModel
 import br.com.contact.domain.repository.ContactRepository
 import br.com.contact.resources.database.AppDatabase
 import br.com.contact.resources.network.ContactApi
@@ -32,4 +33,5 @@ val repositoryModule = module {
 
 val viewModelModule = module {
     viewModel { ContactListViewModel(get()) }
+    viewModel { FavoriteContactsViewModel(get()) }
 }

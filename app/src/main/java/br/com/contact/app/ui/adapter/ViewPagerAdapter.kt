@@ -1,4 +1,4 @@
-package br.com.contact.app.ui
+package br.com.contact.app.ui.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

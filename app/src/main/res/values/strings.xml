@@ -2,4 +2,5 @@
     <string name="app_name">Contacts</string>
     <string name="tab_contact">Contacts</string>
     <string name="tab_favorites">Favorites</string>
+    <string name="error_loading_contacts">Houve uma falha ao carregar contatos</string>
 </resources>

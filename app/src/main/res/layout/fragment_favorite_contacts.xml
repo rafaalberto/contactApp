@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".app.ui.ContactListFragment">
+    tools:context=".app.ui.fragment.ContactListFragment">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/favorite_contacts"
@@ -20,7 +20,9 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:scrollbars="vertical"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="10"
+                tools:listitem="@layout/contact_item" />
 
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 

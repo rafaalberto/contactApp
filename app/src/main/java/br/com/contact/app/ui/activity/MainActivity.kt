@@ -1,10 +1,11 @@
-package br.com.contact.app.ui
+package br.com.contact.app.ui.activity
 
 import android.app.Application
 import br.com.contact.BuildConfig
 import br.com.contact.app.config.databaseModule
 import br.com.contact.app.config.networkModule
 import br.com.contact.app.config.repositoryModule
+import br.com.contact.app.config.viewModelModule
 import com.github.kittinunf.fuel.core.FuelManager
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -24,7 +25,8 @@ class MainActivity : Application() {
                 listOf(
                     databaseModule,
                     networkModule,
-                    repositoryModule
+                    repositoryModule,
+                    viewModelModule
                 )
             )
         }

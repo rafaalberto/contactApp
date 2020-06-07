@@ -1,7 +1,7 @@
 package br.com.contact.app.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,12 +10,17 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import br.com.contact.R
-import br.com.contact.app.ui.viemModel.ContactListViewModel
+import br.com.contact.app.ui.activity.AddFavoriteActivity
 import br.com.contact.app.ui.adapter.ContactListAdapter
+import br.com.contact.app.ui.viemModel.ContactListViewModel
 import br.com.contact.databinding.FragmentContactListBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ContactListFragment : Fragment() {
+
+    companion object {
+        const val CONTACT_ID = "contact-id"
+    }
 
     private val viewModel by viewModel<ContactListViewModel>()
 
@@ -40,7 +45,9 @@ class ContactListFragment : Fragment() {
     }
 
     private fun redirectFavoriteContact(contactId: Int) {
-        Log.d("Contact selected", contactId.toString())
+        val intent = Intent(activity, AddFavoriteActivity::class.java)
+        intent.putExtra(CONTACT_ID, contactId)
+        startActivity(intent)
     }
 
     private fun observeLoading() {
